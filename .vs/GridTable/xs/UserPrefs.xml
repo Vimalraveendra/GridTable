@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{8C341D59-18C5-4A2B-B420-BAE085A83A59}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GridTable/Program.cs">
+    <Files>
+      <File FileName="GridTable/Pages/Index.razor" Line="12" Column="12" />
+      <File FileName="GridTable/wwwroot/StyleSheet.cs" Line="22" Column="18" />
+      <File FileName="GridTable/Program.cs" Line="18" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GridTable" expanded="True">
+            <Node name="GridTable" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GridTable PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

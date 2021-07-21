@@ -1,0 +1,41 @@
+﻿
+*{
+    box-sizing:border-box;
+}
+body
+{
+margin: 0;
+padding: 0;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+
+.table-container{
+    max-width:590px;
+    min-width:580px;
+    height:450px;
+    background-color:aquamarine;
+
+}
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 15px;
+    padding:10px;
+}
+.header-section p{
+    margin-bottom:0px;
+}
+    .header-section button {
+        border: none;
+        background: transparent;
+    }
+
+        .header-section button:hover {
+            background: red;
+            cursor:pointer;
+            color:#fff;
+        }
+    
