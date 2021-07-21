@@ -1,22 +1,43 @@
 ﻿@page "/"
 
-<div class="table-container">
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
 
-   <div class="header-section">
-       <p>Table</p>
-      <button>&#935;</button>
-   </div>
+<div class="main-container">
+
+    <div class="header-section">
+        <p>Table</p>
+        <button>&#935;</button>
+    </div>
+    <div class="button-group">
+        <button>Delete</button>
+        <button>Close</button>
+    </div>
+    <div class="table-container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+            </tbody>
+        </table>
+
+    </div>
 
 </div>
-<table style="width:100%">
-    <thead>
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody id="table-data">
 
-    </tbody>
-</table>
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("logUser");
+        }
+    }
+}
