@@ -4,12 +4,19 @@
 @inject IJSRuntime JSRuntime
 
 <div class="main-container">
+    <form >
+        <label for="fname">First name:</label><br>
+        <input type="text" id="name" value=""><br><br>
+        
+        <input type="submit" value="Submit" @onclick="HandleSubmit" @onclick:preventDefault="true"  >
+    </form>
 
     <div class="header-section">
         <p>Table</p>
         <button>&#935;</button>
     </div>
     <div class="button-group">
+        <button>Edit</button>
         <button>Delete</button>
         <button>Close</button>
     </div>
@@ -23,7 +30,7 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="table-data">
+            <tbody id="table-data" class="table-data">
             </tbody>
         </table>
 
@@ -39,5 +46,11 @@
         {
             await JSRuntime.InvokeVoidAsync("logUser");
         }
+    }
+
+    public async void HandleSubmit()
+    {
+        await JSRuntime.InvokeVoidAsync("setInputTextToTable");
+        StateHasChanged();
     }
 }

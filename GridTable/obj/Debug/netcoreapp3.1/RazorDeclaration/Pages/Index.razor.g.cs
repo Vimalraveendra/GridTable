@@ -84,7 +84,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "/Users/vimalraveendran/Desktop/blazor/GridTable/GridTable/Pages/Index.razor"
+#line 42 "/Users/vimalraveendran/Desktop/blazor/GridTable/GridTable/Pages/Index.razor"
  
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -92,6 +92,12 @@ using Microsoft.JSInterop;
         {
             await JSRuntime.InvokeVoidAsync("logUser");
         }
+    }
+
+    public async void HandleSubmit()
+    {
+        await JSRuntime.InvokeVoidAsync("setInputTextToTable");
+        StateHasChanged();
     }
 
 #line default
