@@ -100,9 +100,31 @@ function loadUsers() {
         filterListContainerEl.classList.toggle('done')
         const tRowContainerEl = document.querySelectorAll('.table-data tr')
         tRowContainerEl.forEach(list => {
-            filterListContainerEl.innerHTML += `<li>${list.childNodes[1].textContent}</li>`
+            var current = document.getElementsByClassName("active");
+            console.log('cur', current)
+
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            filterListContainerEl.innerHTML += `<li  class=" active">${list.childNodes[1].textContent}</li>`
         })
-        
+        const tBodyEl = document.querySelector('.table-data')
+        //here we are converting each table row nodes into array for sorting purpose
+        //const tRowsEl = Array.from(tBodyEl.querySelectorAll('tr'))
+        //console.log('tables', tRowsEl)
+        let tableRowEl = tBodyEl.querySelectorAll('tr')
+        for (var i = 0; i < tableRowEl.length; i++) { }
+        let tdEl = tableRowEl.childNodes[1]
+        if (tdEl) {
+            let textValue = tdEl.textContent
+            if (textValue.indexOf(inputValueEl.nodeValue) > -1) {
+                tableRowEl[i].style.display = "";
+            } else {
+                tableRowEl[i].style.display="none"
+            }
+
+        }
+
     }
 
     
