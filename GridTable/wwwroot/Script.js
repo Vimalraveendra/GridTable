@@ -7,6 +7,7 @@ window.logUser = window.logUser ||
 
 function loadUsers() {
     const inputValueEl = document.getElementById('name')
+    const filterListContainerEl = document.querySelector('.filter-list')
 
     //let personData = [
     //    {
@@ -95,6 +96,14 @@ function loadUsers() {
         })
     };
 
+    window.dropDownFilterList = () => {
+        filterListContainerEl.classList.toggle('done')
+        const tRowContainerEl = document.querySelectorAll('.table-data tr')
+        tRowContainerEl.forEach(list => {
+            filterListContainerEl.innerHTML += `<li>${list.childNodes[1].textContent}</li>`
+        })
+        
+    }
 
     
 }
