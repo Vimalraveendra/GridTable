@@ -84,7 +84,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "/Users/vimalraveendran/Desktop/blazor/GridTable/GridTable/Pages/Index.razor"
+#line 46 "/Users/vimalraveendran/Desktop/blazor/GridTable/GridTable/Pages/Index.razor"
  
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -99,6 +99,12 @@ using Microsoft.JSInterop;
         await JSRuntime.InvokeVoidAsync("setInputTextToTable");
         StateHasChanged();
     }
+    public async void HandleFilterList()
+    {
+        await JSRuntime.InvokeVoidAsync("dropDownFilterList");
+        StateHasChanged();
+    }
+
 
 #line default
 #line hidden

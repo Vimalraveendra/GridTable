@@ -26,7 +26,7 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Name</th>
+                    <th>Name<span class="name-span" @onclick="HandleFilterList"><i class="fas fa-filter"></i></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -35,6 +35,10 @@
         </table>
 
     </div>
+
+    <ul class="filter-list">
+
+    </ul>
 
 </div>
 
@@ -53,4 +57,10 @@
         await JSRuntime.InvokeVoidAsync("setInputTextToTable");
         StateHasChanged();
     }
+    public async void HandleFilterList()
+    {
+        await JSRuntime.InvokeVoidAsync("dropDownFilterList");
+        StateHasChanged();
+    }
+
 }
